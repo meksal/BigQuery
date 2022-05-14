@@ -1,0 +1,16 @@
+--To get the temperature, wind speed, and precipitation for stations La Guardia and JFK, for every day in 2020, in descending order by date, and ascending order by Station ID
+SELECT  
+stn, date,
+IF(temp = 9999.9, NULL, temp) AS temperature,
+IF(wdsp = '999.9', NULL, CAST(wdsp AS float64)) AS windspeed,
+IF(prcp = 99.99, 0, prcp) AS precipitation
+FROM `bigquery-public-data.noaa_gsod.gsod2020` 
+WHERE
+stn = "725030" OR stn = "744860"
+ORDER BY date DESC, stn ASC
+
+--To get average temperature in the month of July 2020 from the table created from the previous query's results
+SELECT 
+AVG(temperature) 
+FROM `xenon-chain-348913.TEST_WEATHER.nyc_weather` 
+WHERE date BETWEEN '2020-06-01' AND '2020-06-30'
