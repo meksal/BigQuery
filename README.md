@@ -1,2 +1,4 @@
 # BigQuery
-Contains queries composed in the 5th Course of the Google Data Analytics Certification. This file queries the CDC database to learn the highest births in the year of 2018. 
+Contains queries composed in the 5th Course of the Google Data Analytics Certification.
+CDC Dataset queries the CDC database to learn the highest births in the year of 2018. 
+Analyzing weather data queries the weather table to learn the temperatures in NYC, specifically the stations La Guardia and JFK using IF statement to replace default values to NULL, and saving the results as a new table to further query the average temperature in NYC during the month of June in 2020
