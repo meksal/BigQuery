@@ -1,0 +1,29 @@
+--joined on market
+SELECT
+seasons.market AS team_name,
+mascots.mascot,
+seasons.wins,
+seasons.losses
+FROM
+`bigquery-public-data.ncaa_basketball.mbb_historical_teams_seasons` AS seasons
+LEFT OUTER JOIN 
+`bigquery-public-data.ncaa_basketball.mascots` AS mascots
+ON
+seasons.market = mascots.market
+WHERE 
+CAST(seasons.season AS int64) >= 1984
+
+SELECT
+ seasons.market AS university,
+ seasons.name AS team_name,
+FROM
+ `bigquery-public-data.ncaa_basketball.mbb_historical_teams_seasons` AS seasons
+JOIN
+ `bigquery-public-data.ncaa_basketball.mascots` AS mascots
+ON
+ seasons.team_id = mascots.id
+WHERE
+ seasons.season = 1984
+ AND seasons.division = 1
+ORDER BY
+ seasons.market
