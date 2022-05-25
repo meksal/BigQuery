@@ -1,0 +1,16 @@
+SELECT 
+ Small_Bags,
+ Large_Bags,
+ XLarge_Bags,
+ Small_Bags + Large_Bags + XLarge_Bags AS total_bags_calc
+ FROM `xenon-chain-348913.avocado_data.avocados_from_mexico`
+ 
+SELECT 
+ Date,
+ region,
+ Small_Bags,
+ Total_Bags,
+ (Small_Bags/Total_Bags)*100 AS small_bagPercent
+ FROM `xenon-chain-348913.avocado_data.avocados_from_mexico` 
+ WHERE 
+ Small_Bags <> 0
