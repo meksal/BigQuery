@@ -11,4 +11,6 @@ Contains queries composed in the 5th Course of the Google Data Analytics Certifi
 
 5.Using subqueries to analyze data bike data to learn averages per station, average trips started in each station over time and list of stations commonly used by subscribers
 
-6.
+6. Performing simple calculations to calculate total sales and filtering data based on numerical considtions
+
+7. Using subquery to identify the longest used bike and using that temporary table to find the station where it's rides start the most often
