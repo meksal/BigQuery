@@ -10,3 +10,5 @@ Contains queries composed in the 5th Course of the Google Data Analytics Certifi
 4.Analyzing historical data from Micheal Jordan's games in 1984 and comparing the performances of teams with mascots using JOINS
 
 5.Using subqueries to analyze data bike data to learn averages per station, average trips started in each station over time and list of stations commonly used by subscribers
+
+6.
